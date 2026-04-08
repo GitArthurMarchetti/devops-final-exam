@@ -1,6 +1,10 @@
 pipeline {
     agent any
     
+    tools {
+        nodejs 'NodeJS' 
+    }
+
     environment {
         FIREBASE_TOKEN = credentials('f45d4a52-418f-44be-a070-8b91ad64124f')
         
