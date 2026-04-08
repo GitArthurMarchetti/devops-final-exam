@@ -128,11 +128,9 @@ Jul 2025
 							</h6>
 
 							<p>
-								<strong>Question #1 : Explain what does it means Immutable infrastructure?</strong>
-								xxxxxxx xxxxxxxxxxxx
-								xxxxx xxxx, xxxx x xxxxxxxx
-								xxxxx xxxx, xxxx x xxxxxxxx
-								xxxxx xxxx, xxxx x xxxxxxxx
+								<strong>Question #1 : Explain what does it means Immutable infrastructure?</strong><br>
+								
+								Immutable infrastructure is a DevOps approach where servers and resources are never modified after they are deployed. If an update, fix, or configuration change is needed, the existing server is not altered; instead, a new server is provisioned from an updated image, and the old one is decommissioned. This practice eliminates "configuration drift," ensures consistency across environments, and makes rollbacks safer and more predictable.
 							</p>
 
 							<div class="border-start border-primary border-3 py-1 px-3 my-5">
@@ -142,11 +140,12 @@ Jul 2025
 
 							<p>
 								<strong>Question #2 : Explain the next command: <br> $docker exec -it Ubuntu
-									/bin/bash</strong>
-								xxxxxxx xxxxxxxxxxxx
-								xxxxx xxxx, xxxx x xxxxxxxx
-								xxxxx xxxx, xxxx x xxxxxxxx
-								xxxxx xxxx, xxxx x xxxxxxxx
+									/bin/bash</strong><br>
+									This command is used to open an interactive terminal session inside a running Docker container. Breakdown:<br>
+									- <strong>docker exec</strong>: Runs a new command in a container that is already running.<br>
+									- <strong>-it</strong>: Combines "-i" (interactive), which keeps STDIN open, and "-t" (tty), which allocates a pseudo-TTY (terminal interface).<br>
+									- <strong>Ubuntu</strong>: Specifies the name or ID of the target container.<br>
+									- <strong>/bin/bash</strong>: The specific command to execute inside the container, which in this case starts a Bash shell for manual interaction.
 							</p>
 
 							<div class="mt-5">
