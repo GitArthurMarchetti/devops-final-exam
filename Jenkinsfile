@@ -12,28 +12,28 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Instalando Firebase Tools...'
+                echo 'Installing Firebase Tools...'
                 sh 'npm install -g firebase-tools' 
             }
         }
         
         stage('Testing') {
             steps {
-                echo 'Fazendo deploy para o ambiente de Testing...'
+                echo 'Deploying to Testing environment...'
                 sh "firebase deploy --only hosting --project ${TEST_ENV} --token ${FIREBASE_TOKEN}"
             }
         }
         
         stage('Staging') {
             steps {
-                echo 'Fazendo deploy para o ambiente de Staging...'
+                echo 'Deploying to Staging environment...'
                 sh "firebase deploy --only hosting --project ${STAGE_ENV} --token ${FIREBASE_TOKEN}"
             }
         }
         
         stage('Production') {
             steps {
-                echo 'Fazendo deploy para o ambiente de Production...'
+                echo 'Deploying to Production environment...'
                 sh "firebase deploy --only hosting --project ${PROD_ENV} --token ${FIREBASE_TOKEN}"
             }
         }
